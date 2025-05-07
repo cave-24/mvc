@@ -35,7 +35,7 @@ class MeControllerTwig extends AbstractController
      *
      * @return Response
      */
-    #[Route("/me", name: "me")]
+    #[Route("/mee", name: "mee")]
     public function me(): Response
     {
         return $this->render('me_controller.html.twig');
