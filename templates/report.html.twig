@@ -1,0 +1,168 @@
+{# templates/report.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Report{% endblock %}
+
+{% block body %}
+    <h1>Report mvc-kursen</h1>
+
+
+    <h1 id="kmom01">Kmom01</h1>
+    <h2>Förkunskaper om objektorientering</h2>
+    <p>
+        Har lite erfarenhet via tidigare kurser i Python och javascript.
+        Men det är väl först nu som jag verkligen börjat förstå skillnaden
+        på programmering, där man bara skapar det som ska hända med enkla
+        instruktioner med funktioner och i objektprogrammering så fungerar
+        objektet som en sambandscentral mellan data och metoder
+        (funktioner) som styr vem som ska göra vad.
+    </p>
+
+    <h2>PHP och objektorientering</h2>
+    <p>Grunderna i klasser och objekt:</p>
+    <ul>
+        <li>Hur vi skapar de?</li>
+        <li>Hur vi använder de?</li>
+        <li>Hur vi instansierar de?</li>
+        <li>Att de innehåller properties och metoder</li>
+    </ul>
+    
+    <h3>Properties och metoder</h3>
+    <ul>
+        <li>
+            Properties är variablerna som ger ett objekt ett state som hör
+            till objektet.
+        </li>
+
+        <li>
+            Metoderna tillhör klassen och återanvänds över alla objekt.
+            När vi är inne i klassen eller utanför klassen så används -> (pil
+            operatorn) för att komma åt de.
+        </li>
+    </ul>
+    
+    <h3>Class constant</h3>
+    <p>
+        Tillhör klassen och anropar på ett annat sätt genom <code>self::</code> eller
+        <code>::</code> utanför klassen.
+    </p>
+
+    <h3>Autoloader</h3>
+    <p>
+        Autoloader ser till att klassfiler laddas in automatiskt när de behövs. Då
+        slipper man använda <code>include</code> och <code>require</code>. Vid
+        skapande av ett objekt kontrollerar PHP om klassen finns. Om inte, anropas
+        tillgängliga autoloaders.<br>
+        Man kan definiera och registrera en egen autoloaderfunktion.
+    </p>
+    
+    <h3>Constructor och destructor</h3>
+    <p>
+        Konstruktorn anropas när objektet skapas. Används för att initiera(skapar)
+        objekt.<br>
+        Destruktorn används mest för att permanent städa bort kod, men används sällan.
+    </p>
+
+    <h3>Visibility (synlighet)</h3>
+    <li>
+        <strong>Public:</strong><br>
+        Tillgänglig utanför klassen kan använda sig av
+        klassen och objektet. Publikt är till för användaren.
+        $object fungerar så är all information publik och nåbar
+        för den som använder objektet..
+    </li>
+    <li>
+        <strong>Protected:</strong><br>
+        Är kopplat till arvs delen och gör så man
+        skyddar koden och samtidigt ser till så att de klasser
+        som ärver koden kan läsa koden. 
+    </li>
+    <li>
+        <strong>Private:</strong><br>
+        Ska vi användas oss av så att endast
+        vi skapar koden kan ändra den.<br>
+        Inom objektorientering talas det om inkapsling och att
+        användaren av objektet bara har tillgång till viss
+        information, men till det behövs en mer anpassad klass.
+        När koden kapslats in, skyddas den och endast den som
+        skapat koden har behörighet till att utföra ändringar
+        av koden. Inkapsling  begränsar användandet av objektet
+        och ger möjlighet.<br>
+        Det finns dock möjlighet att ge användaren åtkomst till
+        ge tillgång till att läsa klassens privata delar via
+        getters och vi kan låta klassens användare sätta
+        privata värden via setters.
+    </li>
+
+    <h3>Sessioner</h3>
+    <p>
+        I en session sparas användarens tillfälliga data vid
+        användningen av webbplatsen.<br>
+        Det går jättebra att stoppa in ett objekt i sessionen. och vi
+        pratade lite om serialisering, vad som låg bakom och vad
+        som verkligen hände när ett objekt sparades ner i sessionen.
+    </p>
+
+
+    <h3>Namespace</h3>
+    <p>
+        Namespaces kapslar in kod och undviker namnkonflikter. De förbättrar
+        läsbarheten genom att långa namn kan förkortas. Påverkar främst klasser,
+        funktioner, gränssnitt och konstanter. Deklareras överst i filen med
+        <code>namespace</code>.
+    </p>
+    
+    <h3>Composer autoloader</h3>
+    <p>
+        Om Composer autoloader är rätt inställd har vi namespaces
+        klara, en fungerande autogenererad autoloader och vi har en
+        tydlig kodstruktur i katalogen där filerna ligger på rätt
+        plats i förhållande till sina namespaces. Och en  bra grund
+        struktur har skapats för att kunna koda klasser och objekt
+        i PHP.
+    </p>
+
+    <p>
+        I övrigt kan du även skapa egna exceptions med klasser, vilket kan göra din
+        felhantering tydligare.
+    </p>
+
+    <h2>Kodstruktur i me/report</h2>
+    <p>
+        Jag uppfattar det som att kodbas, koden, strukturen följer kodstandarden som
+        gäller för ramverket Symfony, som jag hittade i PHP the right way.
+        Kodstandarden påminner om JAVA:s standard. Och om det är Symfonys kodstandard
+        vi ska rätta oss efter så har man ju en checklista uppradad och klar i “PHP
+        The Right Way”, vilket borde underlätta i att ha en snygg och korrekt kod.
+    </p>
+
+    <h2>Tankar kring PHP The Right Way</h2>
+    <p>
+        Denna länk är ju som en liten pocket manual med allting som man behöver samlat
+        i ett, så slipper man ha miljoner länkar i läslistan eller som bokmärke.<br>
+        Och jag uppfattar det som att det är en manual att följa rakt uppifrån och
+        ner.<br>
+        Funderar dock på om PHP codesniffer är något vi får lov att använda oss av för
+        att lättare kunna följa kodstandarden?
+    </p>
+
+    <h2>TIL (Today I Learned)</h2>
+    <p>
+        Nu förstår jag vad en autoloader har för funktion i min MacBook…
+    </p>
+
+    <p class="italic-text">
+        Källhänvisningar:<br>
+        Kursmaterial från dbwebb, citat genererade med hjälp av AI, samt bilder med
+        kostnadsfri licens från Adobe Creative Cloud.
+    </p>
+
+
+
+    <h1 id="kmom02">Kmom02</h1>
+    <h1 id="kmom03">Kmom03</h1>
+    <h1 id="kmom04">Kmom04</h1>
+    <h1 id="kmom05">Kmom05</h1>
+    <h1 id="kmom06">Kmom06</h1>
+{% endblock %}

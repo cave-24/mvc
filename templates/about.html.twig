@@ -1,0 +1,29 @@
+{# templates/about.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <h1>About</h1>
+
+    <div class="two-columns">
+        <div class="column1">
+            <a href="{{ asset('img/favicon.png') }}">
+                <img class="bild-column" src="{{ asset('img/favicon.png') }}" alt="BTH logo" style="max-width: 120px;">
+            </a>
+        </div>
+        <div class="column2">
+            <p class="text-column2">
+                I kursen mvc -objektorienterade webbteknologier,
+                jobbar vi med objektorienterade
+                programmeringstekniker i programmeringsspråket PHP.
+                Klassisk objektorientering används tillsammans med
+                objektorienterad programmmering i ett webbramverk, 
+                ihop med databaser samt att det görs enhetstester.<br>
+                Mer specifik info om kursen finns på 
+                <a href="https://dbwebb.se/kurser/mvc-v2" target="_blank">dbwebb.se/kurser/mvc-v2</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

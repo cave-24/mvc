@@ -1,0 +1,55 @@
+/* CSS settings for ME - page */
+
+/* Container for text and img in main */
+.me-container {
+    display: flex; /* Adjust content with flexbox */
+    align-items: flex-start; /* Adjust top of image and text align */
+    gap: 2rem; /* Creates gap between items*/
+
+    margin-top: 1rem;
+}
+
+/* Text me */
+.me-text {
+    flex: 1; /* Text get enough space */
+}
+
+/* Size img me */
+.me-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 200px;
+}
+
+/*  Styling img */
+.me-image img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+/* Responsiveness small screens */
+@media (max-width: 768px) {
+    .me-container {
+        flex-direction: column; /* Stack img above text */
+        align-items: center;
+    }
+
+    .me-text, .me-image {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .me-image img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .site-footer {
+        max-height: 100px;
+        
+        align-items: first baseline; /* Ajust content in columns for same vertical baseline lineup */
+    }
+}

@@ -1,0 +1,22 @@
+//import './bootstrap.js';
+/*
+ * Welcome to your app's main JavaScript file!
+ *
+ * This file will be included onto the page via the importmap() Twig function,
+ * which should already be in your base.html.twig.
+ */
+import './styles/basic.css';
+import './styles/me.css';
+import './styles/about.css';
+import './styles/report.css';
+import './styles/lucky.css';
+import './styles/jsonroutes.css';
+import './styles/header.css';
+import './styles/main.css';
+import './styles/footer.css';
+
+import hello from './js/hello.js';
+
+console.log(hello())
+
+console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

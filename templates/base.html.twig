@@ -1,0 +1,66 @@
+<!DOCTYPE html lang="sv">
+<html>
+    <head>
+        <!-- Metadata and responsive settings-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Site title, can be changed in child templates (twig) -->
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+        <!-- Font and Icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="{{ asset('img/favicon.png') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <!-- CSS, Webpack Encore  (from app.js) -->
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        <!-- JS, Webpack Encore (from app.js) -->
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <!-- Header with navbar for all twig.html sites -->
+        <header class="site-header" style="background-image: url({{ asset('img/header.png') }})">
+            <span class="site-title">Min Symfony sida</span>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('me') }}">Me</a></li>
+                    <li><a href="{{ path('about') }}">About</a></li>
+                    <li><a href="{{ path('report') }}">Report</a></li>
+                    <li><a href="{{ path('lucky') }}">Lucky</a></li>
+                    <li><a href="{{ path('api') }}">JSON routes</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Main content for all twig.html sites-->
+        <main class="main">
+            {% block body %}{% endblock %}
+        </main>
+        
+        <!-- Footer with links for all twig.html sites-->
+        <footer class="site-footer" style="background-image: url({{ asset('img/footer.png') }})">
+            <div class="footer-content">
+                <p>
+                    <a href="https://github.com/cave-24" target="_blank">
+                        <i class="fab fa-github"></i> Mitt GitHub
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/dbwebb-se/mvc" target="_blank">
+                        <i class="fab fa-github"></i> Kursrepo GitHub
+                    </a>
+                </p>
+                <p>&copy; 2025 - Min Symfony sida</p>
+            </div>
+        </footer>
+    </body>
+</html>

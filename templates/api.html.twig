@@ -1,0 +1,13 @@
+{# templates/api.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}API Landningssida{% endblock %}
+
+{% block body %}
+    <h1>API Översikt</h1>
+    
+    <ul>
+        <li><a href="{{ path('quote') }}">/api/quote</a> – Returnerar ett slumpmässigt citat.</li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,65 @@
+/* CSS settings for ABOUT - page */
+
+/* Grid with two columns */
+.two-columns {
+    display: grid; /* Choosen grid layout*/
+    grid-template-columns: 150px 1fr; /* Size columns */
+    gap: 2rem; /* Creates gap between columns */
+
+    margin: 40px 0;
+    border: none;
+    min-height: 100%; /* Colums cover all of container height */
+}
+
+/* Style both columns*/
+.column2,
+.column1 {
+    display: flex; /* Adjust content with flexbox */
+    box-sizing: border-box; /* Includes padding + border in column total widht and height*/
+
+    height: 100%; /* Height in grid */
+
+    justify-content: center; /* Center content in columns horizontal*/
+    align-items: center; /* Center content in columns vertical*/
+    padding: 1rem;
+
+    border: 2px solid #ccc;
+}
+
+.column2 {
+    width: 100%; /* Cover 100% of widht in the container */
+    text-align: center;
+}
+
+/* Style favicon img */
+.column1 img {
+    display: block; 
+
+    max-width: 100%;
+    height: auto; /* Keeps img proportions intakt */
+
+    margin: 0 auto; /* Center img horizontal*/
+}
+
+/* Style text column 2 */
+.text-column2 {
+    width: 100%;
+    
+    text-align: left;
+}
+
+/* Columns cover all of main */
+main .two-columns {
+    width: 100%;
+}
+
+/* Responsiveness to stack columns on small screens */
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .text-column2 {
+        text-align: left;
+    }
+}

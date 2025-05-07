@@ -1,0 +1,14 @@
+{# templates/lucky.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Slumpad Bild och Citat{% endblock %}
+
+{% block body %}
+    <h1>Dagens Motivation</h1>
+
+    <div class="lucky-container">
+        <img src="{{ asset(image) }}" alt="Slumpad bild av städad kille" width="300">
+        <blockquote>{{ quote }}</blockquote>
+    </div>
+{% endblock %}

@@ -1,0 +1,104 @@
+/* CSS settings for HEADER - page */
+
+.site-header {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; /* Covers without scaling */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    
+    position: relative;
+    z-index: 0; /* Basic level stacking */
+
+    min-height: 150px;
+    width: auto;
+    padding: 2em 1em;
+
+    color: rgb(13, 13, 13);  
+}
+
+.site-header .site-title {
+    margin: 0;
+    z-index: 2;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Site titel */
+.site-header .site-title {
+    position: relative;
+    z-index: 2; /* Level 2 stacking, puts header above the page content */
+
+    margin: 0;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Better text readability using dark cover */
+.site-header::before {
+    content: "";
+    position: absolute;
+    z-index: 1; /* Level 1 stacking, cover position between background image and header content */
+
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust transparency of dark cover */
+}
+
+/* Navbar above image and overlay */
+.site-header nav {
+    position: relative;
+    z-index: 2; /* Level 2, stacking, on top of cover */
+}
+
+/* Navbar list */
+.site-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    margin: 1em 0 0 0;
+    padding: 0;
+   
+    list-style: none;
+}
+
+/* Navbar links */
+.site-header nav li a {
+    color: rgb(20, 19, 19);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Navbar link hover effect */
+.site-header nav li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness header */
+@media (max-width: 768px) {
+    .site-header {
+        background-size: cover;
+
+        height: auto;
+        padding: 1.5em 1em;  
+    }
+
+    .site-header nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .site-header .site-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}

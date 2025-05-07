@@ -1,0 +1,28 @@
+/* CSS settings for FOOTER - page */
+
+.site-footer {
+    display: flex; /* Using flexbox to center content */
+    min-height: 150px;
+    width: auto; /* Width adjust according to container */
+
+    justify-content: center; /* Center content in columns horizontal */
+    align-items: center; /* Center content in columns vertical */
+    text-align: center; /* center text content */
+    padding: 1em;
+
+    background-size: cover; /* Covers*/
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+/* Responsiveness footer smaller screens */
+@media (max-width: 186px) {
+
+    .site-footer {
+        background-size: contain;
+        align-items: flex-start; /* Adjust content to top */
+        min-height: 200px; /* Adjust minimum height for smaller screens */
+    }
+}

@@ -1,0 +1,30 @@
+/* CSS settings for LUCKY - page */
+
+/* size and style img in container in main */
+.lucky-container img {
+    display: flex;
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+   
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+/* Size and style text in container in main */
+.lucky-container blockquote {
+    max-width: 300px;
+
+    margin: 1rem auto;
+
+    text-align: center;
+}
+
+/* Responsiveness for img and text in container in main */
+@media (max-width: 768px) {
+    .lucky-container img {
+        max-width: 80%;
+    }
+}

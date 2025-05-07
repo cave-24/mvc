@@ -1,0 +1,26 @@
+{# templates/me_controller.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Me-sidan{% endblock %}
+
+{% block body %}
+    <h1>Om mig</h1>
+    <div class="me-container">
+        <div class="me-text">
+            <p>
+                Bor i mitten av norra Skåne.<br>
+                Fritiden tillbringas till att komma till rätta i nya huset efter en oväntad
+                flytt, att lära mig navigera i tillvaron med en nytillkommen lättare
+                synskada samt att vänja mig vid att hunden inte längre finns med
+                oss.<br>
+                Ser positivt på framtiden genom mina nya glasögon och riktar lite
+                extra fokus på fortsatta studier framöver.
+            </p>
+        </div>
+        <div class="me-image">
+            <img src="{{ asset('img/me.png') }}" alt="Bild på mitt alter ego">
+        </div>
+    </div>
+{% endblock %}
+
